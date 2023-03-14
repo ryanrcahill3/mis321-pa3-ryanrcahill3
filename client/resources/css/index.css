@@ -1,0 +1,40 @@
+body{
+  background-color: black;
+  color: white;
+}
+.nav-link{
+    color: #DC143C;
+}
+.nav-pills .nav-link.active {
+    background-color: #DC143C;
+}
+span.fs-4.mb-0.h1 {
+    color: #DC143C;
+  }
+  #houndstoothify {
+    pointer-events: none;
+  }
+
+  .nav-link:hover {
+    color: #DC143C;
+  }
+
+.song-table th
+{
+    padding: 30px;
+}
+.song-table td
+{
+    padding: 30px;
+}
+.btn{
+    background-color: #DC143C;
+    color: white
+}
+
+
+
+
+
+
+
