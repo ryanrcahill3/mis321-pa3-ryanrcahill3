@@ -44,29 +44,7 @@ app.MapControllers();
 
 app.Run();
 
-// System.Console.WriteLine("Hello World");
-// DeleteSong.DropSongTable();
-// SaveSong.CreateSongTable();
 
-// DateOnly currentDate = new DateOnly();
-// currentDate = DateOnly.FromDateTime(DateTime.Now);
-// System.Console.WriteLine(currentDate);
-
-// Song mySong = new Song() { Title = "Mistborn", Artist = "Brandon Sanderson", Date = $"{currentDate}", Favorited = true, Deleted = false };
-// mySong.Save.CreateSong(mySong);
-
-// mySong = new Song() { Title = "Oathbringer", Artist = "Brandon Sanderson", Date = $"{currentDate}", Favorited = true, Deleted = true };
-// mySong.Save.CreateSong(mySong);
-// System.Console.WriteLine(mySong);
-
-
-// IReadAllData readObject = new ReadData();
-// List<Song> allSongs = readObject.GetAllSongs();
-
-// foreach (Song song in allSongs)
-// {
-//     System.Console.WriteLine(song.ToString());
-// }
-
-
+DeleteSong.DropSongTable();
+SaveSong.CreateSongTable();
 
