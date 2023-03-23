@@ -28,13 +28,7 @@ namespace api.Controllers
             }
             return modifiedSongs;
 
-            // Song song = new Song() { ID = 1, Title = "Complete PA3", Artist = "Jeff Lucas", Date = "Today", Favorited = false };
-            // Song song2 = new Song() { ID = 2, Title = "Exam 2", Artist = "Jeff Lucas", Date = "Today", Favorited = false };
-            // Song song3 = new Song() { ID = 3, Title = "Wash Dishes", Artist = "Jeff Lucas", Date = "Today", Favorited = false };
 
-            // mySongs.Add(song);
-            // mySongs.Add(song2);
-            // mySongs.Add(song3);
         }
 
         // GET: api/ToDo/5
@@ -60,7 +54,7 @@ namespace api.Controllers
         [HttpPost] //Create
         public void Post([FromBody] Song mySong)
         {
-            System.Console.WriteLine(mySong.Title);
+            System.Console.WriteLine("Inside Post");
             mySong.Save.CreateSong(mySong);
         }
 
@@ -68,10 +62,7 @@ namespace api.Controllers
         [HttpPut("{id}")] //Update
         public void Put(int id, [FromBody] Song mySong)
         {
-            System.Console.WriteLine(id);
-            System.Console.WriteLine("Inside the put");
             mySong.Save.UpdateSong(mySong);
-            System.Console.WriteLine(mySong);
         }
 
         // DELETE: api/ToDo/5
@@ -81,10 +72,6 @@ namespace api.Controllers
 
             System.Console.WriteLine(id);
             System.Console.WriteLine("Inside the delete");
-            Song mySong = new Song();
-            mySong.Delete.RemoveSong(id);
-
-
 
         }
     }

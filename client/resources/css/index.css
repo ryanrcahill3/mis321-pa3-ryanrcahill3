@@ -35,6 +35,12 @@ h1{
   padding-bottom: 20px;
 }
 
+.btn.btn-primary {
+  background-color: #DC143C;
+    color: white
+}
+
+
 
 
 

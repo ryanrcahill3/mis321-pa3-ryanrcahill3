@@ -19,12 +19,10 @@ namespace api.models
 
         public ISaveSong Save { get; set; }
 
-        public IDeleteSong Delete { get; set; }
-
         public Song()
         {
             Save = new SaveSong();
-            Delete = new DeleteSong();
+
         }
 
         public override string ToString()
