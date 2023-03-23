@@ -45,6 +45,4 @@ app.MapControllers();
 app.Run();
 
 
-DeleteSong.DropSongTable();
-SaveSong.CreateSongTable();
 
