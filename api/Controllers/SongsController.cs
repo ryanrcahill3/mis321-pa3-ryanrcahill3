@@ -54,7 +54,6 @@ namespace api.Controllers
         [HttpPost] //Create
         public void Post([FromBody] Song mySong)
         {
-            System.Console.WriteLine("Inside Post");
             mySong.Save.CreateSong(mySong);
         }
 
@@ -69,10 +68,8 @@ namespace api.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-
-            System.Console.WriteLine(id);
-            System.Console.WriteLine("Inside the delete");
-
+            DeleteSong DeleteObject = new DeleteSong();
+            DeleteObject.RemoveSong(id);
         }
     }
 }

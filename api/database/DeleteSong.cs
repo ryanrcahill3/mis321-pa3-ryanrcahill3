@@ -31,7 +31,7 @@ namespace api.database
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE songs set deleted = !deleted WHERE id = @id";
+            string stm = @"DELETE FROM songs WHERE id = @id";
 
             using var cmd = new MySqlCommand(stm, con);
 
