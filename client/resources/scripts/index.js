@@ -193,7 +193,7 @@ function PopulateSongs() {
           let favoriteButton = document.createElement("button");
           favoriteButton.classList.add("favorite-Button");
           dataRow.appendChild(favoriteButton);
-          favoriteButton.innerHTML = "Favorite";
+          favoriteButton.innerHTML = song.favorited ? "Unfavorite" : "Favorite";
           favoriteButton.style.margin = "23px 20px 0 0";
           favoriteButton.className = "btn";
           favoriteButton.addEventListener("click", function () {
