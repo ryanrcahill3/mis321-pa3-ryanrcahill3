@@ -11,9 +11,6 @@ body{
 span.fs-4.mb-0.h1 {
     color: #DC143C;
   }
-  #houndstoothify {
-    pointer-events: none;
-  }
 
   .nav-link:hover {
     color: #DC143C;
@@ -33,10 +30,20 @@ span.fs-4.mb-0.h1 {
 }
 h1{
   margin-right: 220px;
-  margin-left: 315px; 
+  margin-left: 30px; 
   color: white;
 }
 
+.houndstoothify{
+  margin-top: 10px;
+  font-size: 3em
+}
+
+strong{
+  margin-right: 30px; 
+  font-size: 1.6em; 
+  color: white
+}
 
 
 
