@@ -44,5 +44,6 @@ app.MapControllers();
 
 app.Run();
 
+// Drops and Creates Fresh Song Table
 // DeleteSong.DropSongTable();
 // SaveSong.CreateSongTable();
