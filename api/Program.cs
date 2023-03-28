@@ -44,6 +44,6 @@ app.MapControllers();
 
 app.Run();
 
-// Drops and Creates Fresh Song Table
-// DeleteSong.DropSongTable();
-// SaveSong.CreateSongTable();
+// Drops and Creates Fresh Song Table after Ctrl+C
+DeleteSong.DropSongTable();
+SaveSong.CreateSongTable();

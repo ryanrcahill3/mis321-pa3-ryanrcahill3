@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\pa3test\\mis321-pa3-ryanrcahill3\\api\\api.csproj": {}
+    "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\mis321-pa3-ryanrcahill3\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\pa3test\\mis321-pa3-ryanrcahill3\\api\\api.csproj": {
+    "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\mis321-pa3-ryanrcahill3\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\pa3test\\mis321-pa3-ryanrcahill3\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\mis321-pa3-ryanrcahill3\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\pa3test\\mis321-pa3-ryanrcahill3\\api\\api.csproj",
+        "projectPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\mis321-pa3-ryanrcahill3\\api\\api.csproj",
         "packagesPath": "C:\\Users\\donna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\pa3test\\mis321-pa3-ryanrcahill3\\api\\obj\\",
+        "outputPath": "C:\\Users\\donna\\OneDrive - The University of Alabama\\MIS321\\mis321-pa3-ryanrcahill3\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\donna\\AppData\\Roaming\\NuGet\\NuGet.Config"
