@@ -12,16 +12,21 @@ async function handlePost() {
     Date: getDate(),
     Favorited: false,
   };
-  newSong.title = document.getElementById("title").value;
-  newSong.artist = document.getElementById("artist").value;
-  BlankFields();
-  await fetch(url, {
-    method: "POST",
-    body: JSON.stringify(newSong),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
+
+  newSong.Title = document.getElementById("title").value;
+  newSong.Artist = document.getElementById("artist").value;
+  if (newSong.Title != "" && newSong.Artist != "") {
+    BlankFields();
+    await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(newSong),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+  } else {
+    alert("song title and artist are required");
+  }
 }
 
 async function handlePut(putSong) {
@@ -139,6 +144,12 @@ function PopulateSongs() {
   fetch(url)
     .then((response) => response.json())
     .then((songs) => {
+      songs.reverse().sort(function (a, b) {
+        //sorts by date
+        let dateA = new Date(a.date);
+        let dateB = new Date(b.date);
+        return dateB - dateA;
+      });
       songs.forEach(function (song) {
         if (song.deleted == false) {
           let dataRow = thead.insertRow();
@@ -166,14 +177,38 @@ function PopulateSongs() {
           editButton.style.margin = "23px 20px 0 60px";
           editButton.className = "btn";
           editButton.addEventListener("click", function () {
-            let newTitle = prompt("What should the title be?");
-            let newArtist = prompt("What should the artist be?");
+            let newTitle = "";
+            let newArtist = "";
+            let newDate = "";
+            while (newTitle == "") {
+              newTitle = prompt("What should the title be?");
+              if (newTitle == "") {
+                alert("You must enter a title");
+              }
+            }
+            while (newArtist == "") {
+              newArtist = prompt("What should the artist be?");
+              if (newArtist == "") {
+                alert("You must enter an artist");
+              }
+            }
+            var dateRegex = /^\d{1,2}\/\d{1,2}\/\d{4}$/; // Regular expression to match "mm/dd/yyyy" format
+            while (newDate == "" || !dateRegex.test(newDate)) {
+              newDate = prompt("What should the date be? (mm/dd/yyyy)");
+              if (newDate == null) {
+                newDate = oldDate;
+              } else if (newDate == "") {
+                alert("You must enter a date");
+              } else if (!dateRegex.test(newDate)) {
+                alert("You must enter a date in the format mm/dd/yyyy");
+              }
+            }
 
             const updatedSong = {
               ID: song.id,
               Title: newTitle,
               Artist: newArtist,
-              Date: song.date,
+              Date: newDate,
               Favorited: song.favorited,
               Deleted: song.deleted,
             };
